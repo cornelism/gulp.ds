@@ -3,5 +3,6 @@ group :development do
 	gem "sass", "~> 3.3.x"
 	gem "compass", "~> 1.0.3"
 	gem "susy", "~> 2.2.2"
-	gem 'compass-normalize', '~> 1.5'
+	gem "compass-normalize", "~> 1.5"
+  gem "sass-globbing", "~> 1.1.1"
 end

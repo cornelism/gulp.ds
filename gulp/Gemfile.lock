@@ -22,6 +22,8 @@ GEM
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     sass (3.4.13)
+    sass-globbing (1.1.1)
+      sass (>= 3.1)
     susy (2.2.2)
       sass (>= 3.3.0, < 3.5)
 
@@ -32,4 +34,5 @@ DEPENDENCIES
   compass (~> 1.0.3)
   compass-normalize (~> 1.5)
   sass (~> 3.3.x)
+  sass-globbing (~> 1.1.1)
   susy (~> 2.2.2)

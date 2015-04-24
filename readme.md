@@ -53,7 +53,6 @@ Now, open your terminal and go to your used theme folder and run following
 command to install all necessary node modules referenced in package.json file:
   > (sudo) npm install
 
-
 In this same folder run the next command so to install all used gems
 with bundler, these plugins are referenced in the %Gemfile%, so bundler knows
 which ones to download.
@@ -62,6 +61,8 @@ which ones to download.
 Afther succeeding the previus step, run the gulp command to build everything
 for the first time:
  > gulp
+
+ Change the path in the config.js file to the correct path to the used theme
 
 All your sass files will be compiled in the assets/css folder,
 So don't forget to at this to your theme.info file.
