@@ -1,0 +1,21 @@
+$breakpoint-small: 540px;
+$breakpoint-medium: 768px;
+$breakpoint-full: 950px;
+
+@mixin full {
+  @media (min-width: $breakpoint-full) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: $breakpoint-small) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $breakpoint-medium) {
+    @content
+  }
+}

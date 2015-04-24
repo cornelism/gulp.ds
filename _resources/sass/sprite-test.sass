@@ -1,0 +1,47 @@
+// IMPORTS
+@import compass
+@import compass/reset
+@import compass/css3
+
+@import lib/mixins
+@import lib/susy-defaults
+
+@import sprites/sprites
+
+.spritebody
+	background-color: black
+	> div
+		position: absolute
+
+	#sprite1
+		+sprite($about-us)
+		top: 0
+		right: 0
+
+	#sprite2
+		+sprite($locate-bg)
+		top: 0
+		left: 0
+
+	#sprite3
+		+sprite($verbanddoos)
+		bottom: 0
+		left: 0
+
+	#sprite4
+		+sprite($vraag_het)
+		bottom: 0
+		right: 0
+// 
+
+// VARIABLES
+
+// FONTS
+
+// LAYOUT
+
+// COMPONENTS
+
+// FALLBACK
+
+// ...
