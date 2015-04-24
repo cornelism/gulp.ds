@@ -47,22 +47,7 @@ afther you have installed nodeJS,
 you can go and install gulp globally with following comment:
   > (sudo) npm install gulp -g
 
-Now we gonna copy some folders to the theme folder where you're working on.
-Go into the themes/gulp-start folder and copy following files / folders and
-subfolders and paste them in your theme folder (Be sure you copy all the files,
-'cause you gonna need it to succeed the next steps):
-- assets
-  - imgs
-  - js
-    *
-- config
-  *
-- sass
-- gulp
-* Gemfile
-* gulpfile.js
-* package.json
-* .jshintrc
+goto your project folder, to the etc folder and place the gulp folder there.
 
 Now, open your terminal and go to your used theme folder and run following
 command to install all necessary node modules referenced in package.json file:
