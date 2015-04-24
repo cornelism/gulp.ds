@@ -22,7 +22,6 @@
     "gulp-open": "^0.3.2",
     "gulp-rename": "^1.2.0",
     "gulp-ruby-sass": "^0.7.1",
-    "gulp-server-livereload": "^1.2.1",
     "gulp-ttf2eot": "^1.0.1",
     "gulp-ttf2woff": "^1.0.1",
     "gulp-uglify": "^1.0.1",
