@@ -19,7 +19,7 @@ module.exports = {
       'compass',
       'compass-normalize'
     ],
-    src : src_folder + 'sass/*.scss',
+    src : src_folder + 'styles/css/*.scss',
     dest : dest_folder + "css/"
   },
 
@@ -49,7 +49,7 @@ module.exports = {
 
   watch : {
     type : css_type,
-    sass : src_folder + 'sass/**/*.scss',
+    sass : src_folder + 'styles/sass/**/*.scss',
     images : src_folder + 'images/**/*.{png,jpg,gif,jpeg,bpm}',
     fonts : src_folder + 'fonts/*.{ttf,eot,woff,svg}'
   },
