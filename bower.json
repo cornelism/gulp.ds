@@ -16,7 +16,4 @@
     "breakpoint-sass": "~2.5.0",
     "susy": "~2.2.5"
   },
-  "devDependencies": {
-    "normalize": "~1.0.4"
-  }
 }
