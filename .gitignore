@@ -1,3 +1,7 @@
-node_modules/
-gulp/.sass-cache/
+# For now we add our bower_components to git since the server
+# has no node.js installed
+
+node_modules
+.sass-cache
+npm-debug.log
 .DS_Store
