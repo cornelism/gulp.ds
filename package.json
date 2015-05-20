@@ -1,7 +1,7 @@
 {
   "name": "Dropsolid_gulp",
   "version": "1.0.0",
-  "description": "Example package.",
+  "description": "Dropsolid gulp package.",
   "devDependencies": {
     "browserify": "^10.2.0",
     "gulp": "^3.8.11",
