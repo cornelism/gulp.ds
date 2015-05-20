@@ -1,15 +1,12 @@
-var gulp = require('gulp');
-var config = require('../config').watch;
-var tasks = require('../config').tasks;
+var gulp  = require('gulp');
+var livereload = require('gulp-livereload');
+var config = require('../config');
 
-var browserSync   = require('browser-sync');
-
-gulp.task('watch', function() {
-  // Watch images files
-  gulp.watch(config.images, [tasks.sprites])
-    // .on('change', reload);
-
-  // Watch .sass files
-  gulp.watch(config.sass, [tasks.sass]);
-    // .on('change', reload);
+gulp.task('watch', ['setWatch'], function() {
+  livereload.listen();
+  gulp.watch(config.sass.src,       ['sass']);
+  gulp.watch(config.images.src,     ['images']);
+  gulp.watch(config.iconfont.src,   ['iconfont']);
+  gulp.watch(config.fonts.src,      ['fonts']);
+  gulp.watch(config.browserify.src, ['browserify']);
 });

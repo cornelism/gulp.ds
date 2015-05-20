@@ -1,31 +1,21 @@
 var gulp = require('gulp');
-var sass = require('gulp-ruby-sass');
-var runsequence = require('run-sequence');
-
-var handleErrors = require('../util/handleErrors');
-
-var browserSync 	= require('browser-sync');
-var reload			= browserSync.reload;
-
+var sass = require('gulp-sass');
+var globbing = require('gulp-css-globbing');
+var sourcemaps = require('gulp-sourcemaps');
+var livereload = require('gulp-livereload');
 var config = require('../config').sass;
-var tasks = require('../config').tasks;
 
-// console.log('SASS source: ' + config.src);
-// console.log('CSS destination: ' + config.dest);
-// console.log('requirements: ' + config.requirements);
-
-gulp.task(tasks.sass, function(callback){
-	runsequence(tasks.clean, tasks.sprites, 'compile_sass', tasks.minify_css, callback);
-});
-
-gulp.task('compile_sass', function () {
-	return gulp.src([config.src, './Gemfile'])
-		.pipe(sass({
-			compass: true,
-			bundleExec: true,
-			require: config.requirements
-		}))
-		.on('error', handleErrors)
-		.pipe(gulp.dest(config.dest))
-		.pipe(reload({stream: true}));
+gulp.task('sass', ['images'], function () {
+  return gulp.src(config.src)
+    .pipe(globbing({
+        // Configure it to use SCSS files
+        extensions: ['.scss']
+    }))
+    .pipe(sass({
+      errLogToConsole: true
+    }))
+    .pipe(gulp.dest(config.dest))
+    .pipe(livereload())
+    .pipe(sourcemaps.init())
+    .pipe(sourcemaps.write('./'));
 });

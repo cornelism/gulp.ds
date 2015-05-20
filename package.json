@@ -1,0 +1,28 @@
+{
+  "name": "Dropsolid_gulp",
+  "version": "1.0.0",
+  "description": "Example package.",
+  "devDependencies": {
+    "browserify": "^10.2.0",
+    "gulp": "^3.8.11",
+    "gulp-changed": "^1.2.1",
+    "gulp-css-globbing": "^0.1.7",
+    "gulp-iconfont": "^1.0.0",
+    "gulp-iconfont-css": "0.0.9",
+    "gulp-imagemin": "^0.6.2",
+    "gulp-livereload": "^3.8.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.0.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-util": "^3.0.4",
+    "pretty-hrtime": "^1.0.0",
+    "require-dir": "^0.3.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.2.1"
+  },
+  "scripts": {
+    "postinstall": "find node_modules/ -name '*.info' -type f -delete"
+  },
+  "author": "",
+  "license": "ISC"
+}
