@@ -2,6 +2,7 @@
 # has no node.js installed
 
 node_modules
+bower_components
 .sass-cache
 npm-debug.log
 .DS_Store
