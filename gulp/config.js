@@ -27,8 +27,5 @@ module.exports = {
   fonts:{
     src: "assets/src/fonts/*.{ttf,woff,eof,svg,eot}",
     dest: "assets/build/fonts"
-  },
-  templates:{
-    src: "templates/**/*"
   }
 };
