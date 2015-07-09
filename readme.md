@@ -37,7 +37,7 @@ you can go and install gulp globally with following command:
   > (sudo) npm install gulp -g
 
 Also install Bower globally with ( Bower http://bower.io/ ):
-  > (sudo) npm install -g bower
+  > (sudo) npm install bower -g
 
 Now, open your terminal and go to your used theme folder and run following
 command to install all necessary node modules referenced in package.json file:
