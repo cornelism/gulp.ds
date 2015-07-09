@@ -37,63 +37,53 @@ INSTALLATION
 ------------
 
 You need the following software on your system,
-Download and install kids!
+Download and install!
 - nodeJS    http://nodejs.org/
-- bundler   http://bundler.io/
-- ruby      https://www.ruby-lang.org/en/installation/
-            (On MAC OSX Ruby is already pre-installed.)
 
 afther you have installed nodeJS,
 you can go and install gulp globally with following comment:
   > (sudo) npm install gulp -g
-
-goto your project folder, to the etc folder and place the gulp folder there.
+ 
+Also install Bower globally with ( Bower http://bower.io/ ):
+  > (sudo) npm install -g bower
 
 Now, open your terminal and go to your used theme folder and run following
 command to install all necessary node modules referenced in package.json file:
   > (sudo) npm install
+  
+Also get the bower components for susy(grid) and breakpoint-sass
+  > (sudo) bower install
 
-In this same folder run the next command so to install all used gems
-with bundler, these plugins are referenced in the %Gemfile%, so bundler knows
-which ones to download.
-  > bundle install
-
-Afther succeeding the previus step, run the gulp command to build everything
-for the first time:
- > gulp
-
- Change the path in the config.js file to the correct path to the used theme
-
-All your sass files will be compiled in the assets/css folder,
+All your sass files will be compiled in the assets/build/css folder,
 So don't forget to at this to your theme.info file.
 
 
 COMPILING YOUR PROJECT (COMMANDS)
 ---------------------------------
 
-All listed commands can be edited in gulpfile.js,
-but it is recommended to read article mentioned above first.
+All listed commands are found under gulp/tasks.
+You can change the used paths in the config.js file.
 
-Compiles de sass files and put them in the assets/css folder
-  > gulp compile
-
-Creates assets/imgs/sprite.png file from all .png's in the images folder
-and sass/sprites.sass file with all references to the above created sprite
-so you can use them easily.
-  > gulp sprites
-
-Removes all compiled css, sprites and concatenated files,
-but leaves the folders to maintain the structure
-  > gulp clean
-
-Watches the folders for changes, which then compiles,
-concatenates and creates sprites. some are for now put in comments.
+Watches the folders for changes, which then compiles (Sass, Images, Iconfont, Fonts and Js),
   > gulp watch
-
-runs the default task by running the most important tasks.
->> gulp clean -> gulp sprites -> gulp compile
+  
+Gulp watch is used as default.
   > gulp
+ 
+Compiles the sass files in assets/src/sass/*/** and put them in the assets/build/css folder.
+  > gulp sass
 
+Compress all images in the assets/src/images folder and place them in assets/build/images.
+  > gulp images
 
-DESIGN DECISIONS
-----------------
+Creates an iconfont at assets/build/fonts with all the .svg's in the assets/src/icons.
+Also creates the mixins needed at assets/src/sass/helpers/_icons.scss
+Create your own icons with the settings found at (https://www.npmjs.com/package/gulp-iconfont)
+Or download them from icomoon.io
+  > gulp iconfont
+
+Compiles all fonts found at assets/src/fonts to assets/build/fonts. This may need to be used in conjuction with iconfont.
+  > gulp fonts
+
+Compiles all scripts in the /assets/src/js/ to assets/build/js. Normally you won't need to use this command, gulp watch takes care of it.
+  > gulp browserify
