@@ -1,6 +1,7 @@
 {
   "name": "gulp",
   "version": "0.0.0",
+  "homepage": "https://github.com/Dropsolid/gulp.ds",
   "authors": [
     "Thomas De Beuckelaer <thomasdebeuckelaer@dropsolid.com>"
   ],
@@ -12,8 +13,8 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-    "breakpoint-sass": "~2.5.0",
-    "susy": "~2.2.5"
-  },
+  "devDependencies": {
+    "susy": "~2.2.5",
+    "breakpoint-sass": "~2.6.1"
+  }
 }
