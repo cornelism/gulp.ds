@@ -1,3 +1,4 @@
+/*jslint node: true */
 var dest = "assets/build/";
 var src = 'assets/src';
 
@@ -13,19 +14,23 @@ module.exports = {
   browserify: {
     src: './assets/src/js/**',
     bundleConfigs: [{
-      entries: './assets/src/js/main.js',
+      entries: './assets/src/js/app.js',
       dest: dest,
-      outputName: 'js/main.js'
+      outputName: 'js/app.js'
     }]
   },
-  iconfont:{
+  iconfont: {
     src: "assets/src/icons/*.svg",
     dest: "assets/src/fonts",
-    fontName: "dropsolid-icons",
-    sass: "../../src/sass/helpers/_icons.scss"
+    destBuild: "assets/build/fonts",
+    fontName: "gentverbouwforum-icons",
+    sass: "../../src/sass/helpers/mixins/_icons.scss"
   },
-  fonts:{
+  fonts: {
     src: "assets/src/fonts/*.{ttf,woff,eof,svg,eot}",
     dest: "assets/build/fonts"
+  },
+  templates: {
+    src: "templates/**/*"
   }
 };
