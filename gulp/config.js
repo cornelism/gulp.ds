@@ -22,7 +22,6 @@ module.exports = {
   iconfont: {
     src: "assets/src/icons/*.svg",
     dest: "assets/src/fonts",
-    destBuild: "assets/build/fonts",
     fontName: "gentverbouwforum-icons",
     sass: "../../src/sass/helpers/mixins/_icons.scss"
   },
