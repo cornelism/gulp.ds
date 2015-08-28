@@ -22,7 +22,7 @@ module.exports = {
   iconfont: {
     src: "assets/src/icons/*.svg",
     dest: "assets/src/fonts",
-    fontName: "gentverbouwforum-icons",
+    fontName: "gulp-icons",
     sass: "../../src/sass/helpers/mixins/_icons.scss"
   },
   fonts: {
