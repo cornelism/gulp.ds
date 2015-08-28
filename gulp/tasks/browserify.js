@@ -26,7 +26,7 @@ gulp.task('browserify', function (callback) {
           // Required watchify args
           cache: {},
           packageCache: {},
-          fullPaths: true,
+          fullPaths: false,
           // Specify the entry point of your app
           entries: bundleConfig.entries,
           // Add file extentions to make optional in your requires
